@@ -4,7 +4,7 @@ Tato stránka slouží jako moje osobní webová vizitka vytvořená v HTML a CS
 Najdete zde základní informace o mně, přehled technologií, odkazy na GitHub, LinkedIn i ke stažení mého CV.
 
 ## 🔗 Odkaz na živou stránku:
-👉 [https://klacek368.github.io/vizitka/](https://klacek368.github.io/vizitka/)
+👉 [https://klacek368.github.io/me/](https://klacek368.github.io/me/)
 
 ## 🛠 Použité technologie
 - HTML5, CSS3
