@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -10,10 +9,14 @@
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       background: #fff;
       color: #000;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0;
+      padding: 0 5vw;
       line-height: 1.6;
+    }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 0;
     }
     h1, h2 {
       border-bottom: 1px solid #000;
@@ -37,49 +40,86 @@
     .section {
       margin-bottom: 40px;
     }
+    .link-box {
+      display: inline-block;
+      margin: 5px 10px 5px 0;
+      padding: 8px 12px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .contact-box {
+      display: inline-block;
+      padding: 10px 15px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 0 20px;
+      }
+      .link-box, .contact-box {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Marcela Řezková</h1>
-    <p><strong>Email:</strong> <a href="mailto:marcelarezkova98@icloud.com">marcelarezkova98@icloud.com</a> | <strong>Telefon:</strong> +420 734 424 465</p>
-    <p><strong>GitHub:</strong> <a href="#">github.com/tvoje-uzivatelske-jmeno</a> | <strong>LinkedIn:</strong> <a href="#">linkedin.com/in/marcela</a></p>
-  </header>
+  <main>
+    <header>
+      <h1>Marcela Řezková</h1>
+      <p><strong>Email:</strong> <a href="mailto:marcelarezkova98@icloud.com">marcelarezkova98@icloud.com</a> | <strong>Telefon:</strong> +420 734 424 465</p>
+      <div class="link-box"><a href="https://github.com/klacek368" target="_blank">GitHub</a></div>
+      <div class="link-box"><a href="https://linkedin.com/in/marcelařezková" target="_blank">LinkedIn</a></div>
+    </header>
 
-  <section class="section">
-    <h2>O mně</h2>
-    <p>Mám zkušenosti s vedením týmů a projektů v oblasti obchodu, právních služeb a kybernetické bezpečnosti. V současnosti se věnuji vývoji webových aplikací a intenzivně se vzdělávám v oblasti frontendu a backendu. Cílem je stát se full-stack vývojářkou.</p>
-  </section>
+    <section class="section">
+      <h2>O mně</h2>
+      <p>Mám zkušenosti s vedením týmů a projektů v oblasti obchodu, právních služeb a kybernetické bezpečnosti. V současnosti se věnuji vývoji webových aplikací a intenzivně se vzdělávám v oblasti frontendu a backendu. Cílem je stát se full-stack vývojářkou.</p>
+    </section>
 
-  <section class="section">
-    <h2>Portfolio</h2>
-    <ul>
-      <li><a href="#">Osobní webová vizitka</a> – HTML/CSS/JS</li>
-      <li><a href="#">To-do aplikace</a> – React</li>
-      <li><a href="#">REST API – recepty</a> – Node.js + Express</li>
-    </ul>
-  </section>
+    <section class="section">
+      <h2>Portfolio</h2>
+      <ul>
+        <li><a href="#">Osobní webová vizitka</a> – HTML/CSS/JS</li>
+        <li><a href="#">To-do aplikace</a> – React</li>
+        <li><a href="#">REST API – recepty</a> – Node.js + Express</li>
+      </ul>
+    </section>
 
-  <section class="section">
-    <h2>Technologie</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript, React, Node.js</li>
-      <li>Git, GitHub, Visual Studio Code</li>
-      <li>Canva, Figma, 2Captcha API</li>
-    </ul>
-  </section>
+    <section class="section">
+      <h2>Technologie</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript, React, Node.js</li>
+        <li>Git, GitHub, Visual Studio Code</li>
+        <li>Canva, Figma, 2Captcha API</li>
+      </ul>
+    </section>
 
-  <section class="section">
-    <h2>Vzdělání</h2>
-    <ul>
-      <li>Jihočeská univerzita – Bc. Ekonomika a management (2021–2023)</li>
-      <li>Samostudium full-stack vývoje (od 04/2025)</li>
-    </ul>
-  </section>
+    <section class="section">
+      <h2>Vzdělání</h2>
+      <ul>
+        <li>Jihočeská univerzita – Bc. Ekonomika a management (2021–2023)</li>
+        <li>Samostudium full-stack vývoje (od 04/2025)</li>
+      </ul>
+    </section>
 
-  <section class="section">
-    <h2>CV ke stažení</h2>
-    <p><a href="Marcela-Rezkova-1445444-Zivotopisy.cz-1.pdf" download>Stáhnout PDF</a></p>
-  </section>
+    <section class="section">
+      <h2>CV ke stažení</h2>
+      <p><a href="Marcela-Rezkova-1445444-Zivotopisy.cz-1.pdf" download>Stáhnout PDF</a></p>
+    </section>
+
+    <section class="section">
+      <h2>Kontaktujte mě</h2>
+      <div class="contact-box">
+        <a href="mailto:marcelarezkova98@icloud.com">📧 Napište mi e-mail</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
