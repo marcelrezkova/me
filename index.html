@@ -54,35 +54,32 @@
     .section {
       margin-bottom: 40px;
     }
-    .link-box {
+    .link-box, .contact-box {
       display: inline-block;
-      margin: 5px 10px 5px 0;
-      padding: 8px 12px;
+      margin: 8px 12px 8px 0;
+      padding: 10px 16px;
       border: 1px solid var(--border);
-      border-radius: 5px;
+      border-radius: 6px;
       background-color: var(--highlight);
       text-align: center;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-size: 1rem;
     }
-    .contact-box {
+    .link-box:hover, .contact-box:hover {
+      background-color: #dbe7ee;
+      transform: translateY(-2px);
+    }
+    .link-box a, .contact-box a {
       display: inline-block;
-      padding: 10px 15px;
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      text-align: center;
-      background-color: var(--highlight);
+      width: 100%;
     }
-    @media (max-width: 600px) {
-      body {
-        padding: 0 20px;
-      }
-      main {
-        padding: 20px;
-      }
+    @media (max-width: 768px) {
       .link-box, .contact-box {
         display: block;
-        margin-bottom: 10px;
         width: 100%;
-        text-align: center;
+        box-sizing: border-box;
+        margin: 10px 0;
+        font-size: 1.05rem;
       }
     }
   </style>
