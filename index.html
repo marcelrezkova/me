@@ -6,11 +6,13 @@
   <title>Marcela Řezková | Web Developer</title>
   <style>
     :root {
-      --main-bg: #fdfdfc;
-      --accent: #596e79;
-      --text: #2e2e2e;
-      --border: #cfcfcf;
-      --highlight: #e4edf2;
+      --main-bg: #f5f7fa;
+      --accent: #5c6f7a;
+      --text: #2d2d2d;
+      --border: #d1dbe4;
+      --highlight: #eaf0f5;
+      --card-bg: #ffffff;
+      --card-shadow: rgba(0, 0, 0, 0.05);
     }
 
     body {
@@ -23,8 +25,11 @@
     }
     main {
       max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 0;
+      margin: 40px auto;
+      padding: 40px;
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px var(--card-shadow);
     }
     h1, h2 {
       border-bottom: 1px solid var(--border);
@@ -69,6 +74,9 @@
     @media (max-width: 600px) {
       body {
         padding: 0 20px;
+      }
+      main {
+        padding: 20px;
       }
       .link-box, .contact-box {
         display: block;
