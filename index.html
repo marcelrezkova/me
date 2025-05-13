@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marcela Řezková | Web Developer</title>
+  <title>Marcela Rezkova | Web Developer</title>
   <style>
     :root {
       --main-bg: #f5f7fa;
@@ -82,59 +82,56 @@
         margin-right: 12px;
       }
     }
+    .language-switcher {
+      margin-bottom: 20px;
+    }
+    .language-switcher button {
+      margin-right: 8px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      background: var(--card-bg);
+      cursor: pointer;
+    }
+    .hidden { display: none; }
   </style>
 </head>
 <body>
   <main>
-    <header>
+    <div class="language-switcher">
+      <button onclick="switchLang('cs')">🇨🇿 Česky</button>
+      <button onclick="switchLang('en')">🇬🇧 English</button>
+      <button onclick="switchLang('de')">🇩🇪 Deutsch</button>
+    </div>
+
+    <div id="cs" class="lang-block">
       <h1>Marcela Řezková</h1>
       <p><strong>Email:</strong> <a href="mailto:marcelarezkova98@icloud.com">marcelarezkova98@icloud.com</a> | <strong>Telefon:</strong> +420 734 424 465</p>
-      <div class="link-box"><a href="https://github.com/klacek368" target="_blank">GitHub</a></div>
-      <div class="link-box"><a href="https://linkedin.com/in/marcelařezková" target="_blank">LinkedIn</a></div>
-    </header>
+      <div class="section"><h2>CV ke stažení</h2><a href="Marcela Rezkova Zivotopis CZ verze.pdf" download>📄 Stáhnout české CV</a></div>
+    </div>
+
+    <div id="en" class="lang-block hidden">
+      <h1>Marcela Rezkova</h1>
+      <p><strong>Email:</strong> <a href="mailto:marcelarezkova98@icloud.com">marcelarezkova98@icloud.com</a> | <strong>Phone:</strong> +420 734 424 465</p>
+      <div class="section"><h2>Download CV</h2><a href="Marcela Rezkova CV en version UPDATED.pdf" download>📄 Download English CV</a></div>
+    </div>
+
+    <div id="de" class="lang-block hidden">
+      <h1>Marcela Rezkova</h1>
+      <p><strong>E-Mail:</strong> <a href="mailto:marcelarezkova98@icloud.com">marcelarezkova98@icloud.com</a> | <strong>Telefon:</strong> +420 734 424 465</p>
+      <div class="section"><h2>Lebenslauf herunterladen</h2><a href="Marcela Rezkova Lebenslauf DE version.pdf" download>📄 Lebenslauf herunterladen</a></div>
+    </div>
 
     <section class="section">
-      <h2>O mně</h2>
-      <p>Mám zkušenosti s vedením týmů a projektů v oblasti obchodu, právních služeb a kybernetické bezpečnosti. V současnosti se věnuji vývoji webových aplikací a intenzivně se vzdělávám v oblasti frontendu a backendu. Cílem je stát se full-stack vývojářkou.</p>
-    </section>
-
-    <section class="section">
-      <h2>Portfolio</h2>
-      <ul>
-        <li><a href="#">Osobní webová vizitka</a> – HTML/CSS/JS</li>
-        <li><a href="#">To-do aplikace</a> – React</li>
-        <li><a href="#">REST API – recepty</a> – Node.js + Express</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Technologie</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript, React, Node.js</li>
-        <li>Git, GitHub, Visual Studio Code</li>
-        <li>Canva, Figma, 2Captcha API</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Vzdělání</h2>
-      <ul>
-        <li>Jihočeská univerzita – Bc. Ekonomika a management (2021–2023)</li>
-        <li>Samostudium full-stack vývoje (od 04/2025)</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>CV ke stažení</h2>
-      <p><a href="Marcela-Rezkova-1445444-Zivotopisy.cz.pdf" download>Stáhnout PDF</a></p>
-    </section>
-
-    <section class="section">
-      <h2>Kontaktujte mě</h2>
       <div class="contact-box">
         <a href="mailto:marcelarezkova98@icloud.com">📧 Napište mi e-mail</a>
       </div>
     </section>
   </main>
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-block').forEach(el => el.classList.add('hidden'));
+      document.getElementById(lang).classList.remove('hidden');
+    }
+  </script>
 </body>
 </html>
