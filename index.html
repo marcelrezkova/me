@@ -131,16 +131,23 @@
     </div>
 
     <section class="section">
-      <div class="contact-box">
-        <a href="mailto:marcelarezkova98@icloud.com">📧 Napište mi e-mail</a>
-      </div>
-    </section>
+  <div class="contact-box lang-block" id="cs-contact">
+    <a href="mailto:marcelarezkova98@icloud.com">📧 Napište mi e-mail</a>
+  </div>
+  <div class="contact-box lang-block hidden" id="en-contact">
+    <a href="mailto:marcelarezkova98@icloud.com">📧 Send me an email</a>
+  </div>
+  <div class="contact-box lang-block hidden" id="de-contact">
+    <a href="mailto:marcelarezkova98@icloud.com">📧 Schreiben Sie mir eine E-Mail</a>
+  </div>
+</section>
   </main>
   <script>
     function switchLang(lang) {
-      document.querySelectorAll('.lang-block').forEach(el => el.classList.add('hidden'));
-      document.getElementById(lang).classList.remove('hidden');
-    }
+  document.querySelectorAll('.lang-block').forEach(el => el.classList.add('hidden'));
+  document.getElementById(lang).classList.remove('hidden');
+  document.getElementById(lang + '-contact').classList.remove('hidden');
+}
   </script>
 </body>
 </html>
