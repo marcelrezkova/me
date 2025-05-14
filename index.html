@@ -109,7 +109,7 @@
       <div class="section"><h2>O mně</h2>
         <p>V oblasti řízení projektů, obchodu a práva jsem nasbírala rozsáhlé zkušenosti, ale teprve technologie mě naplno vtáhly. Věřím, že propojení analytického myšlení, empatie a schopnosti vidět věci v souvislostech je ideální výbava pro vývojáře, testera i analytika. Toužím stavět smysluplná řešení, chápat souvislosti a růst s každým zadáním, které přede mnou stojí.</p>
       </div>
-      <div class="section"><h2>CV ke stažení</h2><a href="cv-cz.pdf" download>📄 Stáhnout české CV</a></div>
+      <div class="section"><h2>CV ke stažení</h2><a href="Marcela Rezkova Zivotopis CZ verze.pdf" download>📄 Stáhnout české CV</a></div>
     </div>
 
     <div id="en" class="lang-block hidden">
@@ -118,7 +118,7 @@
       <div class="section"><h2>About Me</h2>
         <p>I have years of experience in team leadership, business development and legal services, but it is technology that truly excites me. I believe that combining analytical thinking, empathy and a systems perspective is the perfect foundation for becoming a developer, tester or analyst. I'm driven by the desire to build meaningful solutions, understand complexity and grow with every challenge I face.</p>
       </div>
-      <div class="section"><h2>Download CV</h2><a href="cv-en.pdf" download>📄 Download English CV</a></div>
+      <div class="section"><h2>Download CV</h2><a href="Marcela Rezkova CV en version UPDATED.pdf" download>📄 Download English CV</a></div>
     </div>
 
     <div id="de" class="lang-block hidden">
@@ -127,7 +127,7 @@
       <div class="section"><h2>Über mich</h2>
         <p>Ich habe viele Jahre Erfahrung in Projektleitung, Vertrieb und rechtlicher Betreuung gesammelt – doch die Technologie hat mich wirklich begeistert. Ich bin überzeugt, dass analytisches Denken, Empathie und der Blick für Zusammenhänge die ideale Grundlage für Entwicklung, Testing oder Analyse bilden. Ich möchte sinnvolle Lösungen schaffen, Zusammenhänge verstehen und mit jeder Herausforderung wachsen.</p>
       </div>
-      <div class="section"><h2>Lebenslauf herunterladen</h2><a href="cv-de.pdf" download>📄 Lebenslauf herunterladen</a></div>
+      <div class="section"><h2>Lebenslauf herunterladen</h2><a href="Marcela Rezkova Lebenslauf DE version.pdf" download>📄 Lebenslauf herunterladen</a></div>
     </div>
 
     <section class="section">
@@ -144,9 +144,21 @@
   </main>
   <script>
     function switchLang(lang) {
-  document.querySelectorAll('.lang-block').forEach(el => el.classList.add('hidden'));
-  document.getElementById(lang).classList.remove('hidden');
-  document.getElementById(lang + '-contact').classList.remove('hidden');
+  const langBlocks = document.querySelectorAll('.lang-block');
+  langBlocks.forEach(block => block.classList.add('hidden'));
+
+  const activeLangBlock = document.getElementById(lang);
+  const activeContactBox = document.getElementById(`${lang}-contact`);
+
+  if (activeLangBlock) activeLangBlock.classList.remove('hidden');
+
+  langBlocks.forEach(block => {
+    if (block.id.endsWith('-contact')) {
+      block.classList.add('hidden');
+    }
+  });
+
+  if (activeContactBox) activeContactBox.classList.remove('hidden');
 }
   </script>
 </body>
