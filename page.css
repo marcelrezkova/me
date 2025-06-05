@@ -9,7 +9,7 @@
 }
 
 body.dark-theme {
-  --main-bg: rgba(15, 15, 15, 0.9);
+  --main-bg: rgba(20, 20, 20, 0.92);
   --accent: #e0e0e0;
   --text: #f5f5f5;
   --border: #444;
@@ -24,8 +24,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: url("background.jpg") no-repeat center center fixed;
   background-size: cover;
+  background-attachment: fixed;
   color: var(--text);
-  transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 main {
@@ -36,6 +37,8 @@ main {
   border-radius: 12px;
   box-shadow: 0 4px 12px var(--card-shadow);
   text-align: center;
+  backdrop-filter: blur(6px); /* zjemní pozadí pod obsahem */
+  -webkit-backdrop-filter: blur(6px);
 }
 
 h1 {
