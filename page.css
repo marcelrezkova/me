@@ -8,6 +8,16 @@
   --card-shadow: rgba(0, 0, 0, 0.05);
 }
 
+body.dark-theme {
+  --main-bg: #111;
+  --accent: #9ab;
+  --text: #f0f0f0;
+  --border: #333;
+  --highlight: #1e1e1e;
+  --card-bg: #1a1a1a;
+  --card-shadow: rgba(255, 255, 255, 0.05);
+}
+
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
