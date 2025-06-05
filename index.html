@@ -17,7 +17,7 @@
     </nav>
 
     <!-- Čeština blok -->
-    <section id="cs" class="lang-block" aria-label="Česká verze">
+    <section id="cs" class="lang-block">
       <h1>Marcela Řezková</h1>
       <p>
         <strong>Email:</strong>
@@ -26,18 +26,30 @@
         <strong>Telefon:</strong>
         <a href="tel:+420734424465">+420 734 424 465</a>
       </p>
+
       <div class="section">
         <h2>O mně</h2>
-        <p>Nemám lineární kariérní příběh.Stavěla jsem firmu ve svých 22 letech, řídila tým seniorních projekt manažerů, spouštěla projekty, přežila krize a sama se od nuly naučila programovat. Pokorně mohu říct, že se mi daří v chaosu, vedu s jasností a učím se rychleji než většina, neměla jinou možnost.Hledám příležitosti, kde se potkává lidskost, systémové myšlení a odvaha překonávat se.</p>
+        <p>
+          Nemám lineární kariérní příběh. Stavěla jsem firmu ve svých 22 letech, řídila tým seniorních projekt manažerů,
+          spouštěla projekty, přežila krize a sama se od nuly naučila programovat.
+          Pokorně mohu říct, že se mi daří v chaosu, vedu s jasností a učím se rychleji než většina – neměla jsem jinou možnost.
+          Hledám příležitosti, kde se potkává lidskost, systémové myšlení a odvaha překonávat se.
+        </p>
       </div>
+
       <div class="section">
         <h2>CV ke stažení</h2>
         <a href="MarcelaRezkova-czverze.pdf" download>📄 Stáhnout české CV</a>
       </div>
+
+      <div class="section">
+        <a class="link-box" href="https://github.com/marcelrezkova" target="_blank" rel="noopener">🐙 GitHub Portfolio</a>
+        <a class="link-box" href="https://www.linkedin.com/in/marcela%C5%99ezkov%C3%A1/" target="_blank" rel="noopener">💼 LinkedIn Profil</a>
+      </div>
     </section>
 
-    <!-- English block -->
-    <section id="en" class="lang-block hidden" aria-label="English version">
+    <!-- Anglická verze -->
+    <section id="en" class="lang-block hidden">
       <h1>Marcela Rezkova</h1>
       <p>
         <strong>Email:</strong>
@@ -46,46 +58,41 @@
         <strong>Phone:</strong>
         <a href="tel:+420734424465">+420 734 424 465</a>
       </p>
+
       <div class="section">
         <h2>About Me</h2>
-        <p>I don’t have a linear career story. I’ve led a company, managed teams, launched projects, survived crises, and taught myselfsoftware development from scratch. I thrive in chaos, lead with clarity, and learn faster than mostbecause I’ve had no choice.I’m looking for an opportunity where humanity, systems-thinking and bold learning meet.</p>
+        <p>
+          I don’t have a linear career story. I’ve led a company at 22, managed teams of senior project managers,
+          launched projects, survived crises, and taught myself software development from scratch.
+          I thrive in chaos, lead with clarity, and learn faster than most – I had no other choice.
+          I’m looking for opportunities where humanity, systems thinking, and the courage to grow come together.
+        </p>
       </div>
+
       <div class="section">
         <h2>Download CV</h2>
         <a href="MarcelaRezkova-enverze.pdf" download>📄 Download English CV</a>
       </div>
-    </section>
 
-    <!-- Kontakty -->
-    <section class="section" aria-label="Kontaktní sekce">
-      <div class="contact-box lang-block" id="cs-contact">
-        <a href="mailto:marcelarezkova98@icloud.com">📧 Napište mi e-mail</a>
-      </div>
-      <div class="contact-box lang-block hidden" id="en-contact">
-        <a href="mailto:marcelarezkova98@icloud.com">📧 Send me an email</a>
+      <div class="section">
+        <a class="link-box" href="https://github.com/marcelrezkova" target="_blank" rel="noopener">🐙 GitHub Portfolio</a>
+        <a class="link-box" href="https://www.linkedin.com/in/marcela%C5%99ezkov%C3%A1/" target="_blank" rel="noopener">💼 LinkedIn Profile</a>
       </div>
     </section>
   </main>
+
   <noscript>
     <p style="color: red; text-align: center;">Tato stránka vyžaduje JavaScript pro přepínání jazyků.</p>
   </noscript>
+
   <script>
     function switchLang(lang) {
-      // Skryj všechny jazykové bloky
       document.querySelectorAll('.lang-block').forEach(block => block.classList.add('hidden'));
-      // Zobraz aktivní jazykový blok
       const activeLangBlock = document.getElementById(lang);
       if (activeLangBlock) activeLangBlock.classList.remove('hidden');
-      // Skryj všechny kontaktní boxy
-      document.querySelectorAll('.lang-block[id$="-contact"]').forEach(block => block.classList.add('hidden'));
-      // Zobraz správný kontaktní box
-      const activeContactBox = document.getElementById(`${lang}-contact`);
-      if (activeContactBox) activeContactBox.classList.remove('hidden');
-      // Nastav aria-pressed pro přepínače
       document.getElementById('btn-cs').setAttribute('aria-pressed', lang === 'cs');
       document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
     }
-    // Zajistí správné zobrazení po načtení stránky (např. pokud je vypnutý JS)
     switchLang('cs');
   </script>
 </body>
